@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook Home Page</title>
+    <script src="https://kit.fontawesome.com/5553f878fa.js" crossorigin="anonymous"></script>
+    <style>
+         * {
+             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+          #screen {
+                width: 100%;
+                height: 700px;
+                /* border: 4px solid orange; */
+                 background-color: rgb(240, 242, 245);
+         }
+             #mainnavbar{
+        height: 55px;
+        width: 100%;
+        /* border:1px solid black; */
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        box-shadow: 8px 8px 8px rgb(228, 227, 227);
+
+    }
+    #navleft{
+        width: 28%;
+        height: 100%;
+        /* border:1px solid green; */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #navleft1{
+        width: 18%;
+        height: 100%;
+        /* border:1px solid brown; */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    #navleft1>img{
+        height: 85%;
+        width: 80%;
+    }
+    #navleft2{
+        width: 70%;
+        height: 70%;
+        /* border:1px solid gray; */
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgb(240, 242, 245);
+        margin-left: -35px;
+    }
+    #navleft2>i{
+        margin-left:5px;
+        color: rgb(116, 113, 113)
+    }
+    #navleft2>input{
+        width: 60%;
+        height: 100%;
+        border:none;
+        background-color: rgb(240, 242, 245);
+    }
+    #navmiddle{
+        width: 40%;
+        height: 100%;
+        /* border:1px solid brown; */
+        display: flex;
+    }
+    #navmiddle>div{
+        width: 24%;
+        /* height: 80%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #navmiddle>div>i{
+        font-size: 20px;
+        color: rgb(71, 71, 71);
+    }
+    #navmiddle>div:nth-child(1)>i{
+        color: blue;
+
+    }
+
+    #navright{
+        width: 20%;
+        height: 50px;
+        /* border:1px solid gray; */
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #navright>div{
+        width: 16%;
+        height: 35px;
+        /* border: 4px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        background-color: rgb(240, 242, 245);
+        color: black;
+        border: none;
+    }
+
+    #navright>div>i{
+        font-size: 20px;
+        justify-content: center;
+           
+    }
+    #body {
+        width: 100%;
+        height: 800px;
+        /* border:1px solid black; */
+        display: flex;
+        margin-top: 15px;
+        background-color: rgb(240, 242, 245);
+    }
+
+    #sidebar {
+        width: 25%;
+        height: 700px;
+        /* border:1px solid red; */
+        /* padding: 10px; */
+       
+    }
+   
+
+    #sidebar>div {
+        height: 55px;
+        width: 100%;
+        /* border:1px solid blue; */
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    #sidebar>div:hover {
+        background-color: rgb(222, 222, 222);
+    }
+
+    #sidebar>div>div:nth-child(1) {
+        width: 20%;
+        height: 80%;
+        /* border:1px solid red;     */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #sidebar>div>div:nth-child(1)>i {
+        font-size: 22px;
+    }
+
+    #sidebar>div>div:nth-child(2) {
+        width: 70%;
+        height: 100%;
+        /* border:1px solid red; */
+        display: flex;
+        align-items: center;
+    }
+    
+
+    #mainsection {
+        width: 55%;
+        height: 700px;
+        border:1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #rightsection{
+        width: 26%;
+        height:700px;
+        /* border:1px solid green; */
+        padding-right: 20px;
+    }
+    #rightsection>p{
+        font-size: 22px;
+        color: gray;
+        margin-left: 5px;
+        margin-top: 15px;
+    }
+    #rightsection>div {
+        height: 50px;
+        width: 100%;
+        /* border:1px solid green; */
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+    }
+
+    #rightsection>div:hover {
+        background-color: rgb(222, 222, 222);
+    }
+
+    #rightsection>div>div:nth-child(1) {
+        height: 70%;
+        width: 14%;
+        /* border:1px solid blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2px;
+        background-color: rgb(198, 196, 196);
+    }
+
+    #rightsection>div>div:nth-child(2)>p {
+        font-size: 20px;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="screen">
+        <div id="mainnavbar">
+            <div id="navleft">
+                <div id="navleft1">
+                    <img src="https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png" alt="facebook"/>
+                </div>
+                <div id="navleft2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search facebook"/>
+                </div>
+
+            </div>
+            <div id="navmiddle">
+                <div >
+                    <i class="fa-solid fa-house"></i>
+                </div>
+                <div><i class="fa-solid fa-tv"></i></div>
+                <div><i class="fa-solid fa-store"></i></div>
+                 <div><i class="fa-solid fa-users-viewfinder"></i></div>
+                <div><i class="fa-solid fa-gamepad"></i></div>
+                </div>
+            
+            <div id="navright">
+                <div><i class="fa-solid fa-braille"></i></div>
+                <div><i class="fa-brands fa-facebook-messenger"></i></div>
+                <div><i class="fa-solid fa-bell"></i></div>
+                <div class="icon" id="profile">
+                    <i class="fa-regular fa-user"></i>
+                    <img src=""/>
+
+                </div>
+
+            </div>
+         </div>
+         <div id="body">
+            <div id="sidebar">
+                <div id="switch" onclick="window.location.href='./profile.html'">
+                    <div> 
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                        <div id="name">
+                                <p>Profile</p>
+                        </div>
+                </div>
+                <div>
+                    <div>
+                        <i style="color:rgb(26,132,245);"class = "fa-solid fa-user-group"></i>
+
+                    </div>
+                    <div>
+                        <p>Friends</p>
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <i style="color:rgb(26,132,245);" class="fa-solid fa-bell-concierge"></i>
+                    </div>
+                    <div>
+                        <p>Feeds(Most Recent)</p>
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <i style="color:rgb(26,132,245);" class="fa-solid fa-users-line"></i>
+                    </div>
+                    <div>
+                        <p>Groups</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i style="color:rgb(26,132,245);"class="fa-solid fa-shop"></i>
+                    </div>
+                    <div>
+                        <p>Marketplace</p>
+                    </div>
+                </div>
+                <div>
+                    <div><i style="color:rgb(26,132,245);" class="fa-regular fa-clock"></i></div>
+                    <div><p>Memories</p></div>
+                </div>
+                <div>
+                    <div><i style="color: rgb(189, 62, 200);"class="fa-solid fa-bookmark"></i></div>
+                    <div><p>Saved</p></div>
+                </div>
+                <div>
+                    <div><i style="color: orangered;" class="fa-solid fa-flag"></i></div>
+                    <div><P>Pages</P></div>
+                </div>
+                <div>
+                    <div><i style="color: rgb(133, 15, 243);" class="fa-brands fa-facebook-messenger"></i></div>
+                    <div><p>Messenger</p></div>
+                </div>
+                <div>
+                    <div><i style="color: rgb(15, 243, 243);" class="fa-brands fa-facebook-messenger"></i></div>
+                    <div><p>Messenger Kids</p></div>
+                </div>
+                <div>
+                    <div><i class="fa-solid fa-gamepad"></i></div>
+                    <div><p>Play game</p></div>
+
+                </div>
+                <div>
+                    <div><i class="fa-solid fa-gear"></i></div>
+                    <div>Setting</div>
+                </div>
+                <div onclick="logout()">
+                    <div><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </div>
+                    <div><p>Logout</p></div>
+                </div>
+
+            </div>
+            <div id="mainsection"></div>
+            <div id="rightsection">
+                <p>Birthday</p>
+
+                <div>
+                    <div>
+                    <i style="color: rgb(185, 32, 121);" class="fa-solid fa-cake-candles"></i>
+                </div>
+                <div><p> Today Awdiz's BirthdAy</p></div>
+                </div>
+                <div>
+                    <p>Contacts</p>
+                </div>
+            </div>
+         </div>
+
+    </div>
+    
+</body>
+</html>
