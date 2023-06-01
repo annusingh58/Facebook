@@ -6,8 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Facebook</title>
     <script src="https://kit.fontawesome.com/5553f878fa.js" crossorigin="anonymous"></script>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #screen{
+        width: 100%;
+        height: 650px;
+        border:1px solid orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(240,242,245);
+    }
+    #body{
+        width: 35%;
+        height: 500px;
+        /* border:1px solid red; */
+
+    }
+    #logo{
+        height: 100px;
+        width: 50%;
+    }
+    #logo>h1 {
+            font-size: 55px;
+            text-align: center;
+            letter-spacing: 0.2px;
+            color: rgb(24, 119, 242);
+            margin-left: 125px;
+            margin-top: 25px;
+
+        }
+        
+        #detail{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #detail>div {
+            margin-top: -15px;
+            width: 80%;
+            height: 100%;
+            border: 1px solid rgb(212, 212, 212);
+            border-radius: 5px;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 8px 10px 18px rgb(216, 214, 214);
+        }
+        #detail>div>h2{
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        #detail>div>form>input {
+            height: 55px;
+            width: 100%;
+            border: 1px solid rgb(202, 201, 201);
+            border-radius: 5px;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            outline: none;
+        }
+
+        #detail>div>form>input:nth-child(3) {
+            background-color: rgb(24, 119, 242);
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border: none;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #detail>div>div {
+            height: 45px;
+           /* border: 1px solid blue; */
+              display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #detail>div>div>p {
+           
+            color:rgb(24,119,243);
+            font-size: 17px;
+            
+          
+        }
+        
+</style>
+
 </head>
 <body>
+    <div id="screen">
+        <div id="body">
+            <div id="logo">
+                <h1>facebook</h1>
+                <!-- <img src=""/> -->
+            </div>
+            <div id="detail">
+                <div>
+                    <h2>Log in to Facebook</h2>
+
+                    <form onsubmit="login(event)">
+                        <input id="email" type="email" placeholder=" Email address" />
+                        <input id="password" type="password" placeholder=" Password" />
+                        <input type="submit" value="Log in" />
+                    </form> 
+                    <div>
+                        <p style="cursor: pointer; " onclick="window.location.href='./signup.html'">Forgotten account? · Sign up for Facebook</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
     
 </body>
 </html>
