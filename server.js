@@ -68,12 +68,12 @@ function login(event){
         }
         if(flag){
             localStorage.setItem("Facebook_login",JSON.stringify(login_user));
-            alert("Login Successful!");
+            alert("Login Successful");
             document.getElementById("email").value='';
             document.getElementById("password").value='';
             window.location.href='./home.html';
         }else{
-            alert("Credentials not matched!")
+            alert("Credential not matched")
         }
 
         }
