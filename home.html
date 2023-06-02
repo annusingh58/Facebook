@@ -174,17 +174,138 @@
     
 
     #mainsection {
-        width: 55%;
+        width: 54%;
         height: 700px;
         border:1px solid red;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+    #story{
+        border:1px solid blue;
+        margin-top: 100px;
+        margin-bottom: 30px;
+        width:80%
+    }
+    #head{
+        height:50px;
+        width:100%;
+        border:1px solid green;
+        display: flex;
+    }
+    #head>div{
+        width:50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #head>div:nth-child(1){
+        border-bottom: 3px solid blue;
+        color:blue;
+    }
+    #head>div>p>span{
+        margin-right: 10px;
+    }
+    #story_body{
+        display: flex;
+        padding-top: 5px;
+    }
+    #story_body>div:nth-child(1){
+        width:30%;
+        height:100px;
+    }
+    #story_body>div:nth-child(2){
+        width:70%;
+    }
+    #story_body>div:nth-child(2)>p{
+        margin-bottom: 10px;
+    }
+    #story_body>div:nth-child(2)>p>span{
+        margin-right: 10px;
+    }
+
+
+
+    #post {
+        height: 550px;
+        width: 80%;
+        /* border: 1px solid red; */
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    #mainpost {
+        height: 100px;
+        width: 100%;
+        /* border:1px solid blue; */
+    }
+
+    #mainpost>div:nth-child(1) {
+        display: flex;
+        height: 60px;
+        /* border:4px solid black; */
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    #mainpost>div:nth-child(1)>img {
+        height: 100%;
+        width: 12%;
+        border:1px solid grey;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    #mainpost>div:nth-child(2) {
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        height: 40px;
+    }
+
+    #post-image {
+        height: 400px;
+        width: 100%;
+        /* border:1px solid red; */
+    }
+
+    #post-image>img {
+        height: 100%;
+        width: 100%;
+    }
+
+    #comment {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        /* border: 1px solid brown; */
+    }
+
+    #comment>div {
+        width: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #comment>div>p>span {
+        margin-right: 10px;
+    }
+
+    #comment>div>p {
+        font-size: 18px;
+        color: rgb(24, 23, 23);
+    }
+
+   
+  
+
+
+
     #rightsection{
         width: 26%;
         height:700px;
-        /* border:1px solid green; */
+        /* border:1px solid black; */
         padding-right: 20px;
     }
     #rightsection>p{
@@ -196,7 +317,7 @@
     #rightsection>div {
         height: 50px;
         width: 100%;
-        /* border:1px solid green; */
+        /* border:1px solid brown; */
         margin-top: 10px;
         display: flex;
         align-items: center;
@@ -210,7 +331,7 @@
     #rightsection>div>div:nth-child(1) {
         height: 70%;
         width: 14%;
-        /* border:1px solid blue; */
+        border:1px solid black;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -342,7 +463,61 @@
                 </div>
 
             </div>
-            <div id="mainsection"></div>
+            <div id="mainsection">
+                <div id="story">
+                    <div id="head">
+                        <div><p><span><i class="fa-solid fa-book-open"></i></span>Stories</p></div>
+                        <div><p><span><i class="fa-solid fa-camera-retro"></i></span>Reels</p></div>
+
+                    </div>
+                    <div id="Story-body">
+                        <div>
+                            <div>
+                                <img src="" alt="story"/>
+                                <div><i class="fa-solid fa-plus"></i></div>
+                                <p>Create Story</p>
+                            </div>
+                        </div>
+                        <!-- <div>
+                            <p><span><i class="fa-solid fa-copy"></i></span>Share everyday moments with friends and family.</p>
+                            <p><span><i class="fa-regular fa-clock"></i></span>Stories disappear after 24 hours.</p>
+                            <p><span><i class="fa-regular fa-comment-dots"></i></span>Replies and reactions are private.</p>
+                        </div>                         -->
+                </div>
+                
+
+                </div>
+                <div id="post">
+                    <div id="mainpost">
+                        <div>
+                            <img src=""/>
+                            <p>NAme</p>
+
+                        </div>
+                        <div>
+                            <p>information</p>
+                        </div>
+                    </div>
+                    <div id="post-image">
+
+
+
+                    </div>
+                    <div id="comment">
+                        <div>
+                            <p><span><i class="fa-solid fa-thumbs-up"></i></span>Like</p>
+                        </div>
+                        <div>
+                            <p><span><i class="fa-solid fa-share"></i></span>Share</p>
+                        </div>
+                        <div>
+                            <p><span><i class="fa-regular fa-message"></i></span>Comment</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <div id="rightsection">
                 <p>Birthday</p>
 
@@ -360,5 +535,45 @@
 
     </div>
     
+
+
+    <script>
+        window.onload = function () {
+          
+            var userdata = JSON.parse(localStorage.getItem("Facebook_users"));
+            var currentUser = JSON.parse(localStorage.getItem("Facebook_login"));
+            var loginUser;
+            for(var i=0;i<userdata.length;i++){
+                if(currentUser.uemail == userdata[i].uemail){
+                    loginUser=userdata[i];
+                }
+            }
+
+            var div_login=document.getElementById("name");
+            var change=` <p>${loginUser.uname}</p>`;
+            div_login.innerHTML=change;
+            var divforsideProfile=document.getElementById("switch");
+            var sideProfile_Structure=`<div>
+                        <img style="width:100%;height:100%;border-radius:50%" src="${loginUser.user_Info.profile}" alt="image"/>
+                    </div>
+                    <div>
+                        <p>${loginUser.uname}</p>
+                    </div>`;
+            divforsideProfile.innerHTML=sideProfile_Structure;
+
+            var divforNav_Profile=document.getElementById("nav_profile");
+            var navProfile_Structure=`<img style="width:100%;height:100%;border-radius:50%" src="${loginUser.user_Info.profile}" alt="image" />`;
+            divforNav_Profile.innerHTML=navProfile_Structure;
+
+        }
+        function logout(){
+        alert("logout successful.")
+        localStorage.removeItem("Facebook_login");
+        window.location.reload();
+        window.location.href='./login.html';
+    }
+    </script>
+
+
 </body>
 </html>
